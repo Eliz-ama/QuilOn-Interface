@@ -1,0 +1,41 @@
+<com.google.android.flexbox.FlexboxLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/flexboxLayout"
+    android:layout_width="170dp"
+    android:layout_height="240dp"
+    android:elevation="8dp"
+    android:layout_margin="5dp"
+    app:flexWrap="wrap"
+    android:padding="8dp"
+    android:background="@drawable/bg_retangulo_borda_arredondada"
+    app:alignItems="stretch"
+    app:alignContent="stretch"
+    android:onClick="abrirInterfaceEdicaoProduto">
+
+    <ImageView
+        android:id="@+id/idIVimage1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/image_1" />
+
+    <TextView
+        android:id="@+id/idTitulo1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/idIVcourse"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/idPreco1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="15dp"
+        android:layout_below="@+id/idIVcourse"
+        android:text="" />
+</com.google.android.flexbox.FlexboxLayout>

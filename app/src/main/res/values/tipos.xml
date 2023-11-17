@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tipos">
+        <item>Selecione o tipo</item>
+        <item>Artesanato</item>
+        <item>Trilha</item>
+        <item>Culinaria</item>
+        <item>Outros</item>
+    </string-array>
+</resources>

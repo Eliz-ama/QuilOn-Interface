@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="prazo">
+        <item>Selecione o prazo</item>
+        <item>Menos de 1 dia</item>
+        <item>De 1 a 5 dias</item>
+        <item>De 6 a 10 dias</item>
+        <item>De 11 a 20 dias</item>
+        <item>Mais de 20 dias</item>
+    </string-array>
+</resources>

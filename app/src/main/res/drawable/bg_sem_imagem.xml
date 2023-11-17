@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Inner Background -->
+    <item>
+        <shape>
+            <corners android:radius="20dp" />
+            <solid android:color="@color/cinza_claro" />
+        </shape>
+    </item>
+
+    <!-- First Border -->
+    <item android:right="1dp" android:left="1dp" android:top="1dp" android:bottom="1dp">
+        <shape>
+            <corners android:radius="20dp" />
+            <solid android:color="@android:color/transparent" />
+            <stroke
+                android:width="4dp"
+                android:color="@color/amarelo" />
+        </shape>
+    </item>
+
+    <!-- Second Border (Outer Border) -->
+    <item android:right="5dp" android:left="5dp" android:top="5dp" android:bottom="5dp">
+        <shape>
+            <corners android:radius="20dp" />
+            <solid android:color="@android:color/transparent" />
+            <stroke
+                android:width="4dp"
+                android:color="@color/amarelo_claro" />
+        </shape>
+    </item>
+</layer-list>

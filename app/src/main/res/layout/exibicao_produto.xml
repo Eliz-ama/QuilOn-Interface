@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+<!-- Área amarela -->
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:flexWrap="wrap"
+                android:paddingTop="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="30dp"
+                android:background="@color/amarelo"
+                app:justifyContent="space_between"
+                app:alignItems="stretch"
+                app:alignContent="stretch" >
+
+                <!-- Adicione um espaço de exibição vazio para centralizar a imagem -->
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    />
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200px"
+                    android:src="@drawable/quilon_logo" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    />
+            </com.google.android.flexbox.FlexboxLayout>
+
+<!-- Área amarelo claro -->
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:flexWrap="wrap"
+                android:layout_marginTop="-15dp"
+                android:paddingTop="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:background="@drawable/bg_amarelo_claro_borda_arredondada"
+                app:justifyContent="space_between"
+                app:alignItems="stretch"
+                app:alignContent="stretch" >
+
+                <ImageButton
+                    android:id="@+id/Menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/barrinhas" />
+
+                <ImageView
+                    android:id="@+id/titulo_meus_rodutos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/meus_produtos" />
+
+                <ImageButton
+                    android:id="@+id/Voltar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/voltar" />
+            </com.google.android.flexbox.FlexboxLayout>
+
+    <!-- Barra de Busca -->
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/amarelo_claro"
+                android:padding="20dp" >
+
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_barra_de_busca_borda_arredondada"
+                    android:padding="10dp"
+                    app:alignItems="center"
+                    app:alignContent="center">
+
+                    <ImageView
+                        android:id="@+id/pesquisa"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        app:srcCompat="@drawable/pesquisa" />
+
+                    <EditText
+                        android:id="@+id/edit_text_pesquisa"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@color/white"
+                        android:hint="Buscar" />
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+    <!-- <<<<<<<<<<<<<<<<<<   Categoria  >>>>>>>>>>>>>>>>>> -->
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:flexWrap="wrap"
+                android:background="@color/white"
+                app:justifyContent="space_between"
+                app:alignItems="stretch"
+                app:alignContent="stretch" >
+                <ImageView
+                    android:id="@+id/categoria1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginBottom="10dp"
+                    app:srcCompat="@drawable/categoria"/>
+            </com.google.android.flexbox.FlexboxLayout>
+
+        <!-- Select categoria -->
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingVertical="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                app:justifyContent="space_between"
+                app:alignItems="center"
+                app:alignContent="center"
+                android:background="@color/cinza_claro">
+
+                    <Spinner
+                        android:id="@+id/spinnerTipo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/tipos"
+                        android:background="@color/cinza_claro"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@+id/spinnerArrow">
+                    </Spinner>
+
+                    <ImageView
+                        android:id="@+id/spinnerArrow"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/setinha" />
+
+
+            </com.google.android.flexbox.FlexboxLayout>
+            <!-- Barrinha marrom -->
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                app:flexWrap="wrap"
+                android:layout_marginTop="-4dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:padding="15dp"
+                android:background="@color/marrom"
+                app:justifyContent="space_between"
+                app:alignItems="stretch"
+                app:alignContent="stretch">
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+        <!-- Produtos -->
+            <GridLayout
+                android:id="@+id/idGradeProdutos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnCount="2"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="50dp"
+                android:layout_gravity="center">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="8dp"/>
+            </GridLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
