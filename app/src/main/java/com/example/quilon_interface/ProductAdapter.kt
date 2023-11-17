@@ -6,15 +6,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.flexbox.FlexboxLayout
 
-class ProductAdapter(private val productList: List<Produto>) :
-    RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
+class ProductAdapter(
+    private val productList: List<Produto>,
+    private val onItemClick: (Int) -> Unit
+) : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
 
-    // ViewHolder para cada item na lista
     class ProductViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val titleTextView: TextView = itemView.findViewById(R.id.idTitulo1)
         val priceTextView: TextView = itemView.findViewById(R.id.idPreco1)
-        // Adicione mais elementos conforme necessário
+        val flexboxLayout: FlexboxLayout = itemView.findViewById(R.id.flexboxLayout)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
@@ -29,10 +31,21 @@ class ProductAdapter(private val productList: List<Produto>) :
         // Configurar os dados para exibição
         holder.titleTextView.text = product.title
         holder.priceTextView.text = product.price.toString()
-        // Configurar outros elementos conforme necessário
+
+        // Configurar o ID do produto como uma tag para a flexBox
+        holder.flexboxLayout.tag = product.id
+
+        // Configurar o ouvinte de clique para a FlexboxLayout
+        holder.flexboxLayout.setOnClickListener {
+            val clickedProductId = it.tag as? Int
+            clickedProductId?.let { productId ->
+                onItemClick(productId)
+            }
+        }
     }
 
     override fun getItemCount(): Int {
         return productList.size
     }
 }
+

@@ -111,11 +111,13 @@
                         app:srcCompat="@drawable/pesquisa" />
 
                     <EditText
-                        android:id="@+id/edit_text_pesquisa"
+                        android:id="@+id/editTextSearch"
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
                         android:background="@color/white"
-                        android:hint="Buscar" />
+                        android:hint="Buscar"
+                        android:inputType="text"
+                        android:imeOptions="actionSearch" />
 
                 </com.google.android.flexbox.FlexboxLayout>
 
@@ -193,7 +195,7 @@
             <GridLayout
                 android:id="@+id/idGradeProdutos"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:columnCount="2"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="50dp"

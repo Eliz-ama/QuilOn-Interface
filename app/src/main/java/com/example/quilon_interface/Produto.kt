@@ -3,14 +3,11 @@ import com.google.gson.JsonDeserializer
 import com.google.gson.JsonElement
 import com.google.gson.JsonParseException
 import com.google.gson.annotations.SerializedName
-import com.google.gson.reflect.TypeToken
 import java.lang.reflect.Type
 
-data class ProductResponse(
-    @SerializedName("products") val products: List<Produto>
-)
 
 data class Produto(
+    @SerializedName("id") val id: Int?,
     @SerializedName("title") val title: String,
     @SerializedName("category") val category: String,
     @SerializedName("description") val description: String,
@@ -27,6 +24,7 @@ class ProdutoTypeAdapter : JsonDeserializer<Produto> {
     ): Produto {
         val jsonObject = json.asJsonObject
 
+        val id = jsonObject.get("id")?.asInt
         val title = jsonObject.get("title").asString
         val category = jsonObject.get("category").asString
         val description = jsonObject.get("description").asString
@@ -54,6 +52,7 @@ class ProdutoTypeAdapter : JsonDeserializer<Produto> {
             throw JsonParseException("Unexpected JSON type for stock")
         }
 
-        return Produto(title, category, description, productionTime, price, stock)
+        return Produto(id, title, category, description, productionTime, price, stock)
     }
 }
+

@@ -7,5 +7,6 @@
         <item>De 6 a 10 dias</item>
         <item>De 11 a 20 dias</item>
         <item>Mais de 20 dias</item>
+        <item>Não se aplica</item>
     </string-array>
 </resources>

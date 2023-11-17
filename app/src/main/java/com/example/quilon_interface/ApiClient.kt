@@ -3,11 +3,10 @@ package com.example.quilon_interface//package com.example.quilon_interface
 import Produto
 import ProdutoTypeAdapter
 import com.google.gson.GsonBuilder
-import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class Conexao {
+class ApiClient {
     private val BASE_URL = "http://192.168.1.196:5000/"
 
     fun createApiService(): ApiService {
