@@ -5,12 +5,7 @@
         <domain includeSubdomains="true">localhost</domain>
 
         <!-- Ajustar IP de acordo com a maquina de uso -->
-        <domain includeSubdomains="true">192.168.1.192</domain>
-        <domain includeSubdomains="true">192.168.1.233</domain>
-        <domain includeSubdomains="true">192.168.3.106</domain>
-        <domain includeSubdomains="true">192.168.0.113</domain>
-        <domain includeSubdomains="true">192.168.1.196</domain>
-
+        <!--<domain includeSubdomains="true">192.168.1.192</domain> -->
         <domain includeSubdomains="true">res.cloudinary.com</domain>
     </domain-config>
 </network-security-config>

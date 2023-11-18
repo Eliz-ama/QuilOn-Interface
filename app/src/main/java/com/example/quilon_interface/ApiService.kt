@@ -16,7 +16,7 @@ interface ApiService {
     fun enviarDados(@Body produto: Produto): Call<ResponseBody>
 
 
-    @GET("/search-products")
+    @GET("search-products")
     fun buscarProdutosPorTermo(@Query("term") termo: String): Call<List<Int>>
 
     @GET("product-ids")

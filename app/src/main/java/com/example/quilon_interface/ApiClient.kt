@@ -7,7 +7,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class ApiClient {
-    private val BASE_URL = "http://192.168.1.196:5000/"
+    private val BASE_URL = "https://quilon-api.onrender.com/"
 
     fun createApiService(): ApiService {
         val gson = GsonBuilder()
