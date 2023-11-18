@@ -18,7 +18,7 @@ Este repositório é dedicado ao E-commerce QuilOn.
 
 2. Abra o repositório na ferramenta *Android Studio* e execute o projeto. Você pode abrir nosso aplicativo de duas maneiras:
 
-    - Conecte seu dispositivo via USB, abra a opção de desenvolvedor no *Android Studio*, conceda todas as permissões solicitadas e verifique se ele está selecionado. O projeto será aberto no seu dispositivo móvel.
+    - Conectando seu dispositivo via USB, abra a opção de desenvolvedor no *Android Studio*, conceda todas as permissões solicitadas e verifique se ele está selecionado. O projeto será aberto no seu dispositivo móvel.
 
 
-    - Use o emulador. Certifique-se de possuir 8 GB de RAM para que funcione corretamente e garanta uma boa conexão com a internet.
+    - Utilizando o emulador. Certifique-se de possuir 8 GB de RAM para que funcione corretamente e garanta uma boa conexão com a internet.
